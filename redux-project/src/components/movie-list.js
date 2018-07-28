@@ -2,22 +2,17 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import Movie from './movie'
 import Loader from './loader'
-import {loadingSelector, movieListSelector, fetchAllMovies} from "../ducks/movies";
+import {loadingSelector, movieListSelector} from "../ducks/movies";
 
 @connect(
     state => ({
         loading: loadingSelector(state),
         movies: movieListSelector(state)
-    }),
-    { fetchAllMovies }
+    })
 )
 class MovieList extends Component {
     static propTypes = {
 
-    }
-
-    componentDidMount() {
-        this.props.fetchAllMovies()
     }
 
     render() {

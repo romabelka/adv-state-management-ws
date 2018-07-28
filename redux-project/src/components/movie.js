@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
+import {likeMovie} from '../ducks/movies'
 import './movie.css'
 
+@connect(null, { likeMovie })
 class Movie extends Component {
     static propTypes = {
 
@@ -47,7 +50,10 @@ class Movie extends Component {
         )
     }
 
-    handleLike = () => this.props.movie.like()
+    handleLike = () => {
+        const { likeMovie, movie } = this.props
+        likeMovie(movie)
+    }
 
     get genres() {
         return this.props.movie.genres.map((genre, i) => <li key = {i}>{genre}</li>)
