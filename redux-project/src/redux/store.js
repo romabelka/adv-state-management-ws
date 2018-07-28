@@ -1,10 +1,15 @@
 import {createStore, applyMiddleware} from 'redux'
 import reducer from './reducer'
-import thunk from 'redux-thunk'
+import createSagaMiddleware from 'redux-saga'
+import saga from './saga'
 
-const enhancer = applyMiddleware(thunk)
+const sagaMiddleware = createSagaMiddleware()
+
+const enhancer = applyMiddleware(sagaMiddleware)
 
 const store = createStore(reducer, enhancer)
+
+sagaMiddleware.run(saga)
 
 window.store = store
 
