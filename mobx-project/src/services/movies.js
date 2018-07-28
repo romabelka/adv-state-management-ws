@@ -14,6 +14,25 @@ export class MoviesService {
                     }), {})
             )
     }
+
+    subscribeMoviesChange(callback) {
+        const ref = firebase.database().ref('movies')
+        const dataCallback = (snapshot) => callback({
+            id: snapshot.key,
+            ...snapshot.val()
+        })
+
+        ref.on('child_changed', dataCallback)
+
+        return () => ref.off('child_changed', dataCallback)
+    }
+
+    likeMovie(movie) {
+        return firebase
+            .database()
+            .ref(`movies/${movie.id}/likes`)
+            .set(movie.likes + 1)
+    }
 }
 
 export default new MoviesService()

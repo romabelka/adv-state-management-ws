@@ -10,6 +10,8 @@ const stores = {
     movies: new MoviesStore(moviesService)
 }
 
+window.stores = stores
+
 autorun(() => {
     console.log('---', 'autorun loading', stores.movies.loading)
 })

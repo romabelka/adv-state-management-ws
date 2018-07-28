@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import {observer} from 'mobx-react'
 import './movie.css'
 
+@observer
 class Movie extends Component {
     static propTypes = {
 
@@ -20,7 +22,11 @@ class Movie extends Component {
                         {storyline}
                     </section>
                     <div className="movie--likes">
-                        <button className="btn btn-success">like: {likes}</button>
+                        <button className="btn btn-success"
+                            onClick = {this.handleLike}
+                        >
+                            like: {likes}
+                        </button>
                         <button className="btn btn-danger">dislike: {dislikes}</button>
                     </div>
                     <button className="btn btn-primary">hide details</button>
@@ -42,6 +48,8 @@ class Movie extends Component {
             </div>
         )
     }
+
+    handleLike = () => this.props.movie.like()
 
     get genres() {
         return this.props.movie.genres.map((genre, i) => <li key = {i}>{genre}</li>)

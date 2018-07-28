@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import {observer} from 'mobx-react'
+import {observer, inject} from 'mobx-react'
 import Movie from './movie'
 import Loader from './loader'
-import stores from '../stores'
 
+@inject('movies')
 @observer
 class MovieList extends Component {
     static propTypes = {
@@ -11,11 +11,11 @@ class MovieList extends Component {
     }
 
     componentDidMount() {
-        stores.movies.fetchAll()
+        this.props.movies.fetchAll()
     }
 
     render() {
-        if (stores.movies.loading) return <Loader />
+        if (this.props.movies.loading) return <Loader />
         return (
             <div>
                 {this.movieItems}
@@ -24,8 +24,7 @@ class MovieList extends Component {
     }
 
     get movieItems() {
-        console.log('---', stores.movies.movieList)
-        return stores.movies.movieList.map(movie => <Movie key = {movie.title} movie = {movie}/>)
+        return this.props.movies.movieList.map(movie => <Movie key = {movie.title} movie = {movie}/>)
     }
 }
 
