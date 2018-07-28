@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a1163d11-a763-4484-9958-3b17e401166c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movie-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ducks/movies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ducks/movies.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,10 +31,22 @@
       <file leaf-file-name="movies.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ducks/movies.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
+            <state relative-caret-position="616">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
               <folding>
                 <element signature="e#0#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/store.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,11 +83,11 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/config.js" />
         <option value="$PROJECT_DIR$/src/redux/reducer.js" />
-        <option value="$PROJECT_DIR$/src/redux/store.js" />
         <option value="$PROJECT_DIR$/src/redux/saga.js" />
         <option value="$PROJECT_DIR$/src/ducks/movies.test.js" />
         <option value="$PROJECT_DIR$/src/components/movie-list.js" />
         <option value="$PROJECT_DIR$/src/components/movie.js" />
+        <option value="$PROJECT_DIR$/src/redux/store.js" />
         <option value="$PROJECT_DIR$/src/ducks/movies.js" />
       </list>
     </option>
@@ -115,29 +124,6 @@
             <path>
               <item name="redux-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="redux-project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ducks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -179,7 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1532768258846</updated>
       <workItem from="1532768260162" duration="1444000" />
-      <workItem from="1532770916958" duration="4302000" />
+      <workItem from="1532770916958" duration="5805000" />
     </task>
     <task id="LOCAL-00001" summary="add simple redux project">
       <created>1532772601739</created>
@@ -202,15 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1532776352968</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add realtime with saga">
+      <created>1532777361073</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1532777361073</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5746000" />
+    <option name="totallyTimeSpent" value="7249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -244,7 +236,8 @@
     <MESSAGE value="add simple redux project" />
     <MESSAGE value="simple saga" />
     <MESSAGE value="add simple test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add simple test" />
+    <MESSAGE value="add realtime with saga" />
+    <option name="LAST_COMMIT_MESSAGE" value="add realtime with saga" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/movie-list.js">
@@ -367,16 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ducks/movies.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -404,10 +387,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ducks/movies.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
+        <state relative-caret-position="616">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
           <folding>
             <element signature="e#0#68#0" expanded="true" />
           </folding>
