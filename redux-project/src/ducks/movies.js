@@ -2,13 +2,7 @@ import {put, call, all, select, takeEvery} from 'redux-saga/effects'
 import {createSelector} from 'reselect'
 import {appName} from '../config'
 import {Record, OrderedMap} from 'immutable'
-import movieList from '../movies'
 import moviesService from '../services/movies'
-
-const movies = movieList.reduce((acc, m, id) => ({
-    ...acc,
-    [id]: {...m, id}
-}), {})
 
 /**
  * Constants
