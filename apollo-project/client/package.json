@@ -13,9 +13,13 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-app-rewire-graphql-tag": "^1.1.0",
+    "react-app-rewired": "^1.5.2"
   }
 }

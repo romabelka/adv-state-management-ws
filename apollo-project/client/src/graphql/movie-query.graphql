@@ -1,0 +1,15 @@
+query MovieQuery($id: ID!) {
+    movie(id: $id) {
+        storyline
+        likes
+        dislikes
+        actors {
+            name
+            id
+        }
+        genres {
+            name
+            id
+        }
+    }
+}

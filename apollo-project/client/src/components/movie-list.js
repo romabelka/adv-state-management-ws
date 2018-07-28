@@ -1,19 +1,8 @@
 import React, { Component } from 'react'
 import {Query} from 'react-apollo'
-import gql from 'graphql-tag'
 import Loader from './loader'
-import Movie, {MovieFragment} from './movie'
-
-const query = gql`
-    query {
-        movies {
-            id
-            ...MovieFragment
-        }
-    }
-    
-    ${MovieFragment}
-`
+import Movie from './movie'
+import moviesQuery from '../graphql/movies-query.graphql'
 
 class MovieList extends Component {
     static propTypes = {
@@ -22,7 +11,7 @@ class MovieList extends Component {
 
     render() {
         return (
-            <Query query={query}>
+            <Query query={moviesQuery}>
                 {
                     ({ data, loading, error }) => {
                         if (loading) return <Loader/>

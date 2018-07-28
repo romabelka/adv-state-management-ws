@@ -1,0 +1,4 @@
+fragment MovieListFragment on Movie {
+    id
+    title
+}

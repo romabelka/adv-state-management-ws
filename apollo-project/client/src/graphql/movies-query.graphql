@@ -1,0 +1,7 @@
+#import "./movie-list-fragment.graphql"
+
+query MoviesQuery {
+    movies {
+        ...MovieListFragment
+    }
+}
