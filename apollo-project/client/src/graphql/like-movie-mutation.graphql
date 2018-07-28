@@ -1,0 +1,6 @@
+mutation LikeMovie($id: ID!) {
+    likeMovie(id: $id) {
+        id
+        likes
+    }
+}

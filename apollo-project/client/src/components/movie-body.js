@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import {Mutation} from 'react-apollo'
+import likeMovie from '../graphql/like-movie-mutation.graphql'
 
 class MovieBody extends Component {
     static propTypes = {
@@ -7,13 +8,22 @@ class MovieBody extends Component {
     }
 
     render() {
-        const { storyline, likes, dislikes } = this.props.movie
+        const { storyline, likes, dislikes, id } = this.props.movie
         return (
             <div>
                 <section>
                     {storyline}
                 </section>
-                <button>likes: {likes}</button>
+                <Mutation mutation={likeMovie}
+                          variables={{ id }}
+                          optimisticResponse={
+                              {"likeMovie":{id, "likes": likes + 1,"__typename":"Movie"}}
+                          }
+                >
+                    {(like, { loading }) =>
+                        <button onClick={like}>likes: {likes} {loading ? 'loading' : ''}</button>
+                    }
+                </Mutation>
                 <button>dislikes: {dislikes}</button>
                 <ul>
                     {this.actors}
