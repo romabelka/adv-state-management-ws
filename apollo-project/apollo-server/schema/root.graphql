@@ -1,0 +1,34 @@
+type Movie {
+    id: ID!
+    title: String
+    posterurl: String
+    releaseDate: String
+    storyline: String
+    likes: Int
+    dislikes: Int
+    genres: [Genre]
+    actors: [Actor]
+}
+
+type Actor {
+    id: ID!
+    name: String
+}
+
+type Genre {
+    id: ID!
+    name: String
+    movies: [Movie]
+}
+
+type Query {
+    genres: [Genre]
+    movies: [Movie]
+    paginatedMovies(offset: Int, limit: Int!): [Movie]
+    movie(id: ID!): Movie
+}
+
+type Mutation {
+    likeMovie(id: ID!): Movie
+    dislikeMovie(id: ID!): Movie
+}

@@ -1,0 +1,74 @@
+{
+  "g-0": {
+    "id": "g-0",
+    "name": "Action"
+  },
+  "g-1": {
+    "id": "g-1",
+    "name": "Comedy"
+  },
+  "g-2": {
+    "id": "g-2",
+    "name": "Crime"
+  },
+  "g-3": {
+    "id": "g-3",
+    "name": "Adventure"
+  },
+  "g-4": {
+    "id": "g-4",
+    "name": "Drama"
+  },
+  "g-5": {
+    "id": "g-5",
+    "name": "Fantasy"
+  },
+  "g-6": {
+    "id": "g-6",
+    "name": "Horror"
+  },
+  "g-7": {
+    "id": "g-7",
+    "name": "Romance"
+  },
+  "g-8": {
+    "id": "g-8",
+    "name": "Thriller"
+  },
+  "g-9": {
+    "id": "g-9",
+    "name": "Documentary"
+  },
+  "g-10": {
+    "id": "g-10",
+    "name": "Mystery"
+  },
+  "g-11": {
+    "id": "g-11",
+    "name": "Music"
+  },
+  "g-12": {
+    "id": "g-12",
+    "name": "Family"
+  },
+  "g-13": {
+    "id": "g-13",
+    "name": "War"
+  },
+  "g-14": {
+    "id": "g-14",
+    "name": "Sci-Fi"
+  },
+  "g-15": {
+    "id": "g-15",
+    "name": "Animation"
+  },
+  "g-16": {
+    "id": "g-16",
+    "name": "Biography"
+  },
+  "g-17": {
+    "id": "g-17",
+    "name": "History"
+  }
+}
